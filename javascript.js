@@ -20,4 +20,36 @@ function getComputerChoice() {
     }
 }
 
+function playRound(playerSelection, computerSelection) {
+    
 
+    if (playerSelection === "rock") {
+        if(computerSelection === "rock") {
+        console.log(`You chose ${playerSelection}, the computer picked ${computerSelection} as well. It's a tie.`);
+        } else if (computerSelection === "paper") {
+        console.log(`You chose rock, the computer picked paper. It's your loss.`);
+        } else {
+        console.log(`You chose rock, the computer picked scissors. It's your win.`);
+        }
+    }
+
+    if (playerSelection === "paper") {
+        if (computerSelection === "rock") {
+        console.log(`You chose paper, the computer picked rock. It's your win.`);
+        } else if (computerSelection === "paper") {
+        console.log(`You chose paper, the computer picked paper as well. It's a tie.`);
+        } else {
+        console.log(`You chose paper, the computer picked scissors. It's your loss.`);
+        }
+    }
+    if (playerSelection === "scissor" && playerSelection === "scissors") {
+        if (computerSelection === "rock") {
+        console.log(`You chose scissors, the computer picked rock. It's your loss`);
+    } else if (computerSelection === "paper") {
+        console.log(`You chose scissors, the computer picked paper. It's your win.`);
+    } else {
+        console.log(`You chose scissors, the computer picked scissors as well. It's a tie.`);
+        }
+    }
+}
+playRound(playerSelection, computerSelection);
